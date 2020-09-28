@@ -1,3 +1,3 @@
 module.exports = ({ env }) => ({
-  url: env("APP_URL"),
+  url: env("STRAPI_URL"),
 });

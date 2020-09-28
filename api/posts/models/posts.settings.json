@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "likes": {
+      "type": "integer"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "posts"
+    }
+  }
+}
