@@ -5,6 +5,7 @@ A sample Strapi application we can deploy to DigitalOcean's App Platform.
 ## Instructions to Deploy to App Platform
 
 1. Add the `pg` for database connections: `yarn add pg`
+1. Add `pg-connection-string` to parse the DATABASE_URL env variable: `yarn add pg-connection-string`
 1. Add `"node": ">=10.0.0 <13",` to your package.json in the `engines` property (Strapi doesn't support Node 14 yet)
 1. Setup production server settings in `config/env/production/server.js`
 1. Setup production database settings in `config/env/production/database.js`
