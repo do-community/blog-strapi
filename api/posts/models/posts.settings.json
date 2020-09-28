@@ -19,7 +19,8 @@
       "type": "richtext"
     },
     "likes": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     },
     "user": {
       "plugin": "users-permissions",
