@@ -4,6 +4,7 @@ A sample Strapi application we can deploy to DigitalOcean's App Platform.
 
 ## Instructions to Deploy to App Platform
 
+1. Add the `pg` module
 1. Setup production database and server settings in `config/env/production`
 1. Deploy to App Platform
   1. Add a database when creating
