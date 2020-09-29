@@ -1,3 +1,3 @@
 module.exports = ({ env }) => ({
-  url: env("APP_URL") + "/api",
+  url: `${env("APP_URL")}/api`,
 });
