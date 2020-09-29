@@ -17,9 +17,10 @@ A sample Strapi application we can deploy to DigitalOcean's App Platform.
 
 This assumes that you added in a database component and named it **db**.
 
-| Keys              | Values              |
-| ----------------- | ------------------- |
-| NODE_ENV          | production          |
+| Keys              | Values             |
+| ----------------- | ------------------ |
+| NODE_ENV          | production         |
+| STRAPI_URL        | ${APP_URL}/api     |
 | DATABASE_URL      | ${db.DATABASE_URL} |
 | DATABASE_HOST     | ${db.HOSTNAME}     |
 | DATABASE_PORT     | ${db.PORT}         |
