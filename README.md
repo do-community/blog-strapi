@@ -18,6 +18,7 @@ You can use the Deploy to DigitalOcean button to deploy this repo directly to Ap
 
 -   Make sure you have all your environment variables in place
 -   Add a dev database when deploying
+-   Set HTTP Route to `/api`
 -   Add the Next.js repo after deploying the Strapi App: https://github.com/do-community/blog-next
 
 ## Strapi Setup
