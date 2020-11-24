@@ -1,0 +1,26 @@
+spec:
+  name: blog
+  services:
+    - name: web
+      git:
+        branch: master
+        repo_clone_url: https://github.com/do-community/blog-strapi.git
+      envs:
+        - key: STRAPI_URL
+          value: ${APP_URL}/api
+        - key: NODE_ENV
+          value: "production"
+        - key: DATABASE_URL
+          value: ${db.DATABASE_URL}
+        - key: DATABASE_HOST
+          value: ${db.HOSTNAME}
+        - key: DATABASE_PORT
+          value: ${db.PORT}
+        - key: DATABASE_NAME
+          value: ${db.DATABASE}
+        - key: DATABASE_USERNAME
+          value: ${db.USERNAME}
+        - key: DATABASE_PASSWORD
+          value: ${db.PASSWORD}
+  databases:
+    - name: db
