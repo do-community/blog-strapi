@@ -1,16 +1,24 @@
-# Sample Strapi Application
+# Strapi + Next.js Blog Demo Application
 
-A sample Strapi application we can deploy to DigitalOcean's App Platform.
+This is a demo application for DigitalOcean's App Platform. It is the foundation for a blog built with [Strapi](https://strapi.io/) and [Next.js](https://nextjs.org/).
+
+This is the backend repo for creating the Strapi API. The overall structure of the demo application is:
+
+-   Strapi: Backend API ([Repo](https://github.com/do-community/blog-strapi))
+-   Next.js: Frontend ([Repo](https://github.com/do-community/blog-next))
 
 ## Instructions to Deploy to App Platform
 
-1. Add the `pg` for database connections: `yarn add pg`
-1. Add `"node": ">=10.0.0 <13",` to your package.json in the `engines` property (Strapi doesn't support Node 14 yet)
-1. Setup production server settings in `config/env/production/server.js`
-1. Setup production database settings in `config/env/production/database.js`
-1. Deploy to App Platform
-1. Add a database when creating
-1. Add your environment variables (example below)
+[![Deploy to DO](https://mp-assets1.sfo2.digitaloceanspaces.com/deploy-to-do/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/do-community/blog-strapi/tree/master)
+
+You can use the Deploy to DigitalOcean button to deploy this repo directly to App Platform.
+
+
+### Important Notes on Deployment
+
+-   Make sure you have all your environment variables in place
+-   Add a dev database when deploying
+-   Add the Next.js repo after deploying the Strapi App: https://github.com/do-community/blog-next
 
 ## Strapi Setup
 
@@ -18,16 +26,19 @@ A sample Strapi application we can deploy to DigitalOcean's App Platform.
 1. Add custom types
 1. Configure roles and permissions for new custom types
 
-### Sample Environment Variables
+## Environment Variables
 
-This assumes that you added in a database component and named it **db**.
+The following environment variables are required:
 
-| Keys              | Values             |
-| ----------------- | ------------------ |
-| NODE_ENV          | production         |
-| STRAPI_URL        | ${APP_URL}/api     |
-| DATABASE_HOST     | ${db.HOSTNAME}     |
-| DATABASE_PORT     | ${db.PORT}         |
-| DATABASE_NAME     | ${db.DATABASE}     |
-| DATABASE_USERNAME | ${db.USERNAME}     |
-| DATABASE_PASSWORD | ${db.PASSWORD}     |
+| Name          | Value                 |
+| ------------- | --------------------- |
+| APP_URL       | ${APP_URL}            |
+| APP_ENV       | "production"          |
+| APP_KEY       | "insert-your-app-key" |
+| DB_CONNECTION | "pgsql"               |
+| DATABASE_URL  | ${db.DATABASE_URL}    |
+| DB_HOST       | ${db.HOSTNAME}        |
+| DB_PORT       | ${db.PORT}            |
+| DB_DATABASE   | ${db.PASSWORD}        |
+| DB_USERNAME   | ${db.USERNAME}        |
+| DB_PASSWORD   | ${db.PORT}            |
