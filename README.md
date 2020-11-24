@@ -33,13 +33,11 @@ The following environment variables are required:
 
 | Name          | Value                 |
 | ------------- | --------------------- |
-| APP_URL       | ${APP_URL}            |
-| APP_ENV       | "production"          |
-| APP_KEY       | "insert-your-app-key" |
-| DB_CONNECTION | "pgsql"               |
+| STRAPI_URL    | ${APP_URL}/api        |
+| NODE_ENV      | "production"          |
 | DATABASE_URL  | ${db.DATABASE_URL}    |
-| DB_HOST       | ${db.HOSTNAME}        |
-| DB_PORT       | ${db.PORT}            |
-| DB_DATABASE   | ${db.PASSWORD}        |
-| DB_USERNAME   | ${db.USERNAME}        |
-| DB_PASSWORD   | ${db.PORT}            |
+| DATABASE_HOST       | ${db.HOSTNAME}        |
+| DATABASE_PORT       | ${db.PORT}            |
+| DATABASE_NAME   | ${db.DATABASE}        |
+| DATABASE_USERNAME   | ${db.USERNAME}        |
+| DATABASE_PASSWORD   | ${db.PASSWORD}            |
